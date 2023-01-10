@@ -14,3 +14,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - run: docker build -t holochain/fuzzbox:base .
+      - run: docker push -t holochain/fuzzbox:base
